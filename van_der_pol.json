@@ -1,0 +1,21 @@
+{
+	"name" : "Van der Pool oscillator",
+	"plot" : true,
+    "domain": [
+        [-5, 5, 1],
+        [-5, 5, 1]
+    ],
+    "state_var": "x0, x1",
+    "diff_eq": "[x1, 1.0*(1-x0**2)*x1-x0]",
+    "delta_t": 0.005,
+    "te": 7,
+    "lie_order": 8,
+    "X0": [
+        [1.25, 1.55],
+        [2.25, 2.35]
+    ],
+    "smt_solver" : "dreal",
+    "solver" : "GUROBI",
+    "polyflow_smt_tol" : [5E-6, 12E-5],
+    "remainder_smt_tol" : 0.01
+}
